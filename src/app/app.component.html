@@ -1,0 +1,38 @@
+<form [formGroup]="myFormGroup">
+    <div [ngClass]="divClass">
+
+        <h2>Welcome to Big Honest Jeff's Big Car Lot of Big Joy</h2>
+        <h3>Inventory system</h3>
+
+        <div>
+            Make: <input type='textbox' formControlName="make">
+            Model: <input type='textbox' formControlName="model">
+            Price: <input type='textbox' formControlName="price">
+        </div>
+
+
+        <div>
+            Color: <select formControlName="colorSelect">
+                <option *ngFor="let c of colors" [value]="c.id">
+                    {{c.value}}
+                </option>
+            </select>
+        </div>
+        <div>
+            Year: <select formControlName="yearSelect">
+                <option *ngFor="let y of years" [value]="y.id">
+                    {{y.value}}
+                </option>
+            </select>
+        </div>
+        <div>
+            Transmission: <select formControlName="transmissionSelect">
+                <option *ngFor="let t of transmissions" [value]="t.id">
+                    {{t.value}}
+                </option>
+            </select>
+        </div>
+
+
+    </div>
+</form>
